@@ -36,7 +36,8 @@ data/%.csv: %.csv | data
 data:
 	$(mkdir)
 
-## Not chaining well so far?
+######################################################################
+
 ## https://figshare.com/articles/dataset/Portal_Project_Teaching_Database/1314459
 ## data/rodentData.Rout.csv:
 ## rodentData.Rout: rodentData.R | data
@@ -49,7 +50,9 @@ rodents.Rout: rodents.R data/rodentData.Rout.csv
 
 ## Riparian data from Dudley lab
 ## data/riparianData.Rout.csv: 
-riparianData.Rout: riparianData.R riparianData.csv
+riparianData.Rout: riparianData.R Downloads/riparianData.csv
+
+riparian.Rout: riparian.R data/riparianData.csv
 
 ######################################################################
 
