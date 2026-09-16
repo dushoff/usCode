@@ -6,7 +6,8 @@
 32/4*4
 
 ## Why doesn't Dushoff like the second one?
-print((32/4)*4) 
+print((32/4)*4)
+## Parentheses
 
 ## Assigning values to variables
 
@@ -19,7 +20,7 @@ print(x)
 
 ## What happened here?
 y <- x + 17
-y 
+y
 
 ## Question from card
 print(x+17)
@@ -28,11 +29,11 @@ print(x+17)
 
 ## Values in R
 ## We need to understand:
-#### numeric, character and logical
+#### numeric, character and logical (there are also integer numbers, but we rarely care)
 
 ## str tells us about the structure of a variable
 num <- 3
-str(num) 
+str(num)
 
 ## Quotes make something into a character value instead of an R name
 char <- "Hello, class?"
@@ -42,6 +43,7 @@ logic <- TRUE ## No quotes
 str(logic)
 
 ## R's fundamental object is a _vector_
+## One or more things of the same type in order
 words <- c("Mary", "had", "a", "little", "lamb")
 # c() for concatenate puts elements together into a vector
 str(words)
@@ -52,8 +54,9 @@ str(v)
 ## r vector_math
 v <- 1:5
 w <- c(0, 1, 1, 2, 4)
-v+w
-2*w
+print(v+w)
+print(w)
+print(2*w)
 
 mean(c(2, 5, 11))
 
@@ -67,9 +70,10 @@ print(m_x)
 ## We've already seen a bunch of functions
 
 ## For example?
-
+## We used runif(2)
+runif(n=2)
+runif(n=2, min=17, max=289)
 ## Learn about functions using rstudio help -- I am not an expert
 
 ## Pay attention to what the arguments are
 ## In general, pass arguments using "="
-
