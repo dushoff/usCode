@@ -6,9 +6,27 @@ current: target
 Ignore = target.mk
 
 vim_session:
-	bash -ic "vmt"
+	bash -ic "vmt README.md"
 
 ## -include makestuff/perl.def
+
+######################################################################
+
+Sources += $(wildcard *.md)
+
+######################################################################
+
+Sources += $(wildcard *.R)
+
+autopipeR = defined
+R.Rout: R.R
+
+######################################################################
+
+## CRIB!!
+
+%.R: 
+	$(CP) ../usLectures/$*.R .
 
 ######################################################################
 
@@ -29,7 +47,7 @@ makestuff:
 
 -include makestuff/os.mk
 
-## -include makestuff/pipeR.mk
+-include makestuff/pipeR.mk
 
 -include makestuff/git.mk
 -include makestuff/visual.mk
