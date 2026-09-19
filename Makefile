@@ -27,7 +27,9 @@ R.Rout: R.R
 
 ## Data manipulation
 ## Downloads/ is a mirror, for things I get from elsewhere
-## data/ is a cache for things I want to share (use data/ to show them about putting things in directories)
+## data/ is logically a cache for things I want to share
+## post data/ things on Avenue and let them download and put into the right place
+
 Ignore += data/
 mirrors += Downloads/
 
