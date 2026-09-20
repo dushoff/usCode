@@ -22,6 +22,7 @@ Sources += $(wildcard *.R)
 
 autopipeR = defined
 R.Rout: R.R
+R.final.Rout: R.final.R
 
 ######################################################################
 
@@ -51,17 +52,10 @@ rodents.Rout: rodents.R data/rodentData.Rout.csv
 ######################################################################
 
 ## Riparian data from Dudley lab
-## data/riparianData.Rout.csv: 
+data/riparianData.Rout.csv: riparianData.Rout ;
 riparianData.Rout: riparianData.R Downloads/riparianData.csv
 
-riparian.Rout: riparian.R data/riparianData.csv
-
-######################################################################
-
-## CRIB!!
-
-%.R: 
-	$(CP) ../usLectures/$*.R .
+riparian.Rout: riparian.R data/riparianData.Rout.csv
 
 ######################################################################
 
