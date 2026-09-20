@@ -53,10 +53,18 @@ rodents.Rout: rodents.R data/rodentData.Rout.csv
 
 ## Riparian data from Dudley lab
 ## data/riparianData.Rout.csv: riparianData.Rout ;
-Downloads/riparianData.csv: | Downloads/.get
+Downloads/riparianData.csv:
 riparianData.Rout: riparianData.R Downloads/riparianData.csv
 
 riparian.Rout: riparian.R data/riparianData.Rout.csv
+
+######################################################################
+
+## Smoking example
+
+## Downloads/fev.csv: 
+## Originally from http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/FEV.csv
+
 
 ######################################################################
 
