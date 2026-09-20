@@ -48,6 +48,7 @@ data:
 rodents.Rout: rodents.R data/rodentData.Rout.csv
 
 ## complete_old from ratdat is a smaller set of rodent data
+## Downloads/oldRodents.csv
 
 ######################################################################
 
@@ -65,7 +66,9 @@ riparian.Rout: riparian.R data/riparianData.Rout.csv
 ## Downloads/fev.csv: 
 ## Originally from http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/FEV.csv
 
+fevData.Rout: 
 
+## HERE: Add banana data also, ask them about data??
 ######################################################################
 
 ### Makestuff
