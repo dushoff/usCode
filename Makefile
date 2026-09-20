@@ -53,6 +53,7 @@ rodents.Rout: rodents.R data/rodentData.Rout.csv
 
 ## Riparian data from Dudley lab
 ## data/riparianData.Rout.csv: riparianData.Rout ;
+Downloads/riparianData.csv: | Downloads/.get
 riparianData.Rout: riparianData.R Downloads/riparianData.csv
 
 riparian.Rout: riparian.R data/riparianData.Rout.csv
