@@ -64,7 +64,7 @@ oldRodents.Rout: oldRodents.R data/oldRodents.csv
 Downloads/riparianData.csv:
 riparianData.Rout: riparianData.R Downloads/riparianData.csv
 
-## cp riparian.R riparian.final.R
+## cp riparian.R riparian.final.R ##
 riparian.Rout: riparian.R data/riparianData.Rout.csv
 riparian.final.Rout: riparian.final.R data/riparianData.Rout.csv
 

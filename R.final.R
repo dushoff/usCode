@@ -78,3 +78,23 @@ runif(n=2, min=17, max=289)
 ## Pay attention to what the arguments are
 ## In general, pass arguments using "="
 
+print(sin(sqrt(7)))
+7 |> sqrt() |> sin() |> print()
+
+## Does not work
+## 73*48
+## + 69*22
+## + 101*13
+
+## The modern way
+73*48 +
+69*22 +
+101*13
+
+## An attempt to be more aesthetic
+print(
+	73*48
+	+ 69*22
+	+ 101*13
+)
+
