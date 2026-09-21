@@ -14,6 +14,8 @@ vim_session:
 
 Sources += $(wildcard *.md)
 
+## avenueContent.md has header text for the Code module
+
 ######################################################################
 
 Sources += $(wildcard *.R)
