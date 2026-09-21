@@ -51,6 +51,11 @@ rodents.Rout: rodents.R data/rodentData.Rout.csv
 
 ## complete_old from ratdat is a smaller set of rodent data
 ## Downloads/oldRodents.csv
+data/oldRodents.csv: Downloads/oldRodents.csv
+	$(copy)
+
+oldRodents.Rout: oldRodents.R data/oldRodents.csv
+
 
 ######################################################################
 
@@ -59,7 +64,9 @@ rodents.Rout: rodents.R data/rodentData.Rout.csv
 Downloads/riparianData.csv:
 riparianData.Rout: riparianData.R Downloads/riparianData.csv
 
+## cp riparian.R riparian.final.R
 riparian.Rout: riparian.R data/riparianData.Rout.csv
+riparian.final.Rout: riparian.final.R data/riparianData.Rout.csv
 
 ######################################################################
 
@@ -71,6 +78,18 @@ riparian.Rout: riparian.R data/riparianData.Rout.csv
 fevData.Rout: 
 
 ## HERE: Add banana data also, ask them about data??
+
+######################################################################
+
+## Provinces
+## Downloads/provinces.tsv
+data/provinces.tsv: Downloads/provinces.tsv
+	$(copy)
+
+## cp provinces.R provinces.final.R
+provinces.Rout: provinces.R data/provinces.tsv
+provinces.final.Rout: provinces.final.R data/provinces.tsv
+
 ######################################################################
 
 ### Makestuff
