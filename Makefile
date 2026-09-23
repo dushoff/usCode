@@ -54,7 +54,9 @@ rodents.Rout: rodents.R data/rodentData.Rout.csv
 data/oldRodents.csv: Downloads/oldRodents.csv
 	$(copy)
 
+## cp oldRodents.R oldRodents.final.R ##
 oldRodents.Rout: oldRodents.R data/oldRodents.csv
+oldRodents.final.Rout: oldRodents.final.R data/oldRodents.csv
 
 ######################################################################
 
