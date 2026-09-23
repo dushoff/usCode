@@ -22,4 +22,18 @@ print(dat
 ## mutate
 
 ## summarise
+summary(dat)
 
+print(dat
+	|> filter(!is.na(position))
+	|> summarise(position = mean(position), .by=plant_species)
+)
+
+library(ggplot2)
+theme_set(theme_bw())
+
+print(ggplot(dat)
+	+ aes(x=wet, y=plant_species)
+	+ geom_boxplot()
+	+ scale_x_log10()
+)

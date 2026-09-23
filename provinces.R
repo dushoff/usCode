@@ -3,13 +3,9 @@ library(readr)
 library(dplyr)
 
 ## What does this do?
-dat <- read_csv("data/provinces.tsv")
+dat <- read_tsv("data/provinces.tsv")
 
-## Why is this commented out?
-summary(dat)
-## summary(dat |> mutate_if(is.character, as.factor))
-
-## filter
+## mutate
 print(dat)
 
-## select
+## summarise
