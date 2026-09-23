@@ -8,13 +8,34 @@ library(dplyr)
 dat <- read_csv("data/riparianData.Rout.csv")
 
 ## Why is this commented out?
-## summary(dat)
+summary(dat)
 ## summary(dat |> mutate_if(is.character, as.factor)) ## look at "factor view", maybe old-fashioned
 
 ## filter
-print(dat)
-
 ## select
+## We could also say conQuest <- (dat ... to store instead of examine
+print(dat
+	|> filter(conductivity > 500)
+	|> select(transect_no, position, plant_species, conductivity)
+)
+
+## 53 positions measured > 10. What if want to know about NAs?
+print(dat
+	|> filter(position > 10)
+	|> select(transect_no, position, plant_species, conductivity)
+)
+
+## A lot more than 53 _might be_ > 10
+print(dat
+	|> filter_out(position <= 10)
+	|> select(transect_no, position, plant_species, conductivity)
+)
+
+## Check that it all seems to work
+print(dat
+	|> filter_out(position <= 10 | is.na(position))
+	|> select(transect_no, position, plant_species, conductivity)
+)
 
 ## mutate
 
