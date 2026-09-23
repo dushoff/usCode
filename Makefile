@@ -56,7 +56,6 @@ data/oldRodents.csv: Downloads/oldRodents.csv
 
 oldRodents.Rout: oldRodents.R data/oldRodents.csv
 
-
 ######################################################################
 
 ## Riparian data from Dudley lab
