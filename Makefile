@@ -20,6 +20,8 @@ Sources += $(wildcard *.md)
 
 Sources += $(wildcard *.R)
 
+hot.Rout: hot.R
+
 ## R lecture
 
 autopipeR = defined

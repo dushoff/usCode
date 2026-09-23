@@ -98,3 +98,14 @@ print(
 	+ 101*13
 )
 
+## A more beautiful pipe? Note that all continuations are inside the ()
+print(
+	7 |> sqrt() |> sin()
+)
+
+## Just make a variable for a quick example
+weight <- c(5, 6, NA)
+
+print(mean(weight))
+
+print(weight==6)
