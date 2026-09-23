@@ -1,4 +1,4 @@
-## put all packages at the top 
+## Put all packages at the top:
 #### People know what they need
 #### will get an error quickly if they don't have everything
 library(readr)
