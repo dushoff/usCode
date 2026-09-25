@@ -109,3 +109,5 @@ weight <- c(5, 6, NA)
 print(mean(weight))
 
 print(weight==6)
+
+print(!is.na(weight))
