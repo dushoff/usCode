@@ -3,6 +3,7 @@
 #### will get an error quickly if they don't have everything
 library(readr)
 library(dplyr)
+library(ggplot2)
 
 ## Reads the file into a table, and puts it into the variable "dat"
 dat <- read_csv("data/riparianData.Rout.csv")
@@ -41,3 +42,23 @@ print(dat
 
 ## summarise
 
+## summarise is careful with NAs, which is good because it produces tables you might work with
+print(dat
+	|> summarise(
+		transect_no=mean(transect_no)
+		, position=mean(position)
+	)
+)
+
+meanBySpp <- (dat
+	|> summarise(
+		conductivity=mean(conductivity)
+		, wet = mean(wet)
+		, .by=plant_species
+	)
+) 
+
+print(ggplot(dat)
+	+ aes(conductivity, wet, color=plant_species)
+	+ geom_point()
+)

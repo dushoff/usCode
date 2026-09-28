@@ -6,6 +6,13 @@ library(dplyr)
 dat <- read_tsv("data/provinces.tsv")
 
 ## mutate
-print(dat)
+dat <- (dat
+	|> mutate(
+		totalArea = Land + Water
+		, density = Population/totalArea
+		, check = totalArea-Total
+	)
+)
 
-## summarise
+summary(dat)
+
