@@ -84,6 +84,14 @@ fevData.Rout:
 
 ######################################################################
 
+## Penguins
+## data/penguinData.Rout.csv: penguinData.R
+penguinData.Rout: penguinData.R
+
+penguins.Rout: penguins.R data/penguinData.Rout.csv
+
+######################################################################
+
 ## Provinces
 ## Downloads/provinces.tsv
 data/provinces.tsv: Downloads/provinces.tsv
