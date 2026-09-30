@@ -102,7 +102,6 @@ print (ggplot(dat)
 	+ geom_boxplot()
 )
 
-
 print (ggplot(dat)
 	+ aes(x=conductivity, y=plant_species)
 	+ geom_boxplot()
