@@ -3,7 +3,7 @@
 #### will get an error quickly if they don't have everything
 library(readr)
 library(dplyr)
-library(ggplot2)
+library(ggplot2); theme_set(theme_bw(base_size=15))
 
 ## Reads the file into a table, and puts it into the variable "dat"
 dat <- read_csv("data/riparianData.Rout.csv")
@@ -58,7 +58,52 @@ meanBySpp <- (dat
 	)
 ) 
 
-print(ggplot(dat)
-	+ aes(conductivity, wet, color=plant_species)
+scatter <- (ggplot(dat)
+	+ aes(conductivity, wet)
 	+ geom_point()
+)
+
+print(scatter + aes(color=plant_species))
+print(scatter + facet_wrap(~plant_species))
+
+## Not necessary if you can find a global theme that you like
+##print(scatter + facet_wrap(~plant_species) + theme_bw())
+
+## print(scatter + geom_smooth())
+## All log scales are basically the same (look at ratios instead of intervals)
+## the 10 in log10 just refers to how labels are chosen
+print(scatter + scale_x_log10())
+
+print (ggplot(dat)
+	+ aes(transect_no)
+	+ geom_bar()
+)
+
+print (ggplot(dat)
+	+ aes(position)
+	+ geom_histogram()
+)
+
+conHist <- (ggplot(dat)
+	+ aes(conductivity)
+	+ geom_histogram()
+)
+
+print(conHist)
+print(conHist + scale_x_log10())
+
+print (ggplot(dat)
+	+ aes(wet)
+	+ geom_histogram()
+)
+
+print (ggplot(dat)
+	+ aes(x=wet, y=plant_species)
+	+ geom_boxplot()
+)
+
+
+print (ggplot(dat)
+	+ aes(x=conductivity, y=plant_species)
+	+ geom_boxplot()
 )
