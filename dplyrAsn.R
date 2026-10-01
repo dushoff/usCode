@@ -53,3 +53,4 @@ print(rDat
 ## The first answer is the same!
 ## This is because they did not weigh non-rodents for this rodent study
 ## The second answer is different (the way I did it when setting the homework is wrong, and counted a bunch of non-measured non-rodents).
+## Apologies for wasting the time of people more careful than me.
