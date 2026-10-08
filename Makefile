@@ -58,6 +58,8 @@ data/oldRodents.csv: Downloads/oldRodents.csv
 
 ## cp oldRodents.R oldRodents.final.R ##
 oldRodents.Rout: oldRodents.R data/oldRodents.csv
+
+## Not active, published this year in dplyrAsn
 oldRodents.final.Rout: oldRodents.final.R data/oldRodents.csv
 
 dplyrAsn.Rout: dplyrAsn.R data/oldRodents.csv
