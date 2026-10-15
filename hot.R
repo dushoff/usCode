@@ -1,37 +1,29 @@
-## put all packages at the top 
-#### People know what they need
-#### will get an error quickly if they don't have everything
 library(readr)
 library(dplyr)
+library(ggplot2)
 
 ## Reads the file into a table, and puts it into the variable "riparian"
-riparian <- read_csv("data/riparianData.Rout.csv")
+children <- read_csv("data/fevData.Rout.csv")
 
 ## Why is this commented out?
-summary(riparian)
+summary(children)
 
-## filter
-print(riparian
-	|> filter(conductivity>500)
-	|> select(distance, transect_no, plant_number, conductivity)
-)
+onesamp <- lm(height ~ 1, data=children)
 
-## select
+confint(onesamp)
 
-## mutate
-
-## summarise
-summary(riparian)
-
-print(riparian
-	|> filter(!is.na(position))
-	|> summarise(position = mean(position), .by=plant_species)
-)
-
-library(ggplot2)
-theme_set(theme_bw(base_size=14))
-
-print(ggplot(riparian)
-	+ aes(x=transect_no)
+print(ggplot(children)
+	+ aes(x=height)
 	+ geom_histogram()
 )
+
+twosamp <- lm(height ~ 1, data=children)
+
+confint(onesamp)
+
+print(ggplot(children)
+	+ aes(x=height)
+	+ geom_histogram()
+)
+
+

@@ -6,7 +6,7 @@ current: target
 Ignore = target.mk
 
 vim_session:
-	bash -ic "vmt README.md"
+	bash -ic "vmt README.md TODO.md notes.md"
 
 ## -include makestuff/perl.def
 
@@ -20,7 +20,7 @@ Sources += $(wildcard *.md)
 
 Sources += $(wildcard *.R)
 
-hot.Rout: hot.R
+hot.Rout: hot.R data/fevData.Rout.csv
 
 ## R lecture
 
@@ -82,7 +82,11 @@ riparian.final.Rout: riparian.final.R data/riparianData.Rout.csv
 ## Downloads/fev.csv: 
 ## Originally from http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/FEV.csv
 
-fevData.Rout: 
+fevData.Rout: fevData.R Downloads/fev.csv
+
+fev.Rout: fev.R data/fevData.Rout.csv
+
+######################################################################
 
 ## HERE: Add banana data also, ask them about data??
 
