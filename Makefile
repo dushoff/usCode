@@ -77,7 +77,16 @@ riparian.final.Rout: riparian.final.R data/riparianData.Rout.csv
 
 ######################################################################
 
+## Built-in chick data as an example for classic anova
+## chicks.Rout: chicks.R
+
+######################################################################
+
 ## Mouse activity as an example for classic t test
+
+## mouseActivityData.Rout: mouseActivityData.R
+
+mouseActivity.Rout: mouseActivity.R data/mouseActivityData.Rout.csv
 
 ######################################################################
 
