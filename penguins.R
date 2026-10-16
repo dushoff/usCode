@@ -1,7 +1,10 @@
 library(readr)
 library(dplyr)
+library(performance)
+library(DHARMa)
 
 penguins <- read_csv("data/penguinData.Rout.csv")
+summary(penguins)
 
 print(penguins
    |> summarize(
@@ -10,3 +13,13 @@ print(penguins
 		, .by = species
 	)
 )
+
+overall <- lm(body_mass_g ~ 1, data=penguins)
+plot(overall)
+plot(simulateResiduals(overall))
+## check_model(overall)
+
+spMod <- lm(body_mass_g ~ 1 + species, data=penguins)
+plot(spMod)
+plot(simulateResiduals(spMod))
+## check_model(spMod)

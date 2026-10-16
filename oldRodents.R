@@ -4,5 +4,4 @@ library(dplyr)
 
 dat <- read_csv("data/oldRodents.csv")
 
-## Why is this commented out?
-## View(dat)
+summary(dat)

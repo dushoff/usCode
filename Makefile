@@ -77,6 +77,15 @@ riparian.final.Rout: riparian.final.R data/riparianData.Rout.csv
 
 ######################################################################
 
+## Mouse activity as an example for classic t test
+
+######################################################################
+
+## Joint erosion as an example for paired t test
+## include pivoting?
+
+######################################################################
+
 ## Smoking example
 
 ## Downloads/fev.csv: 
@@ -85,6 +94,7 @@ riparian.final.Rout: riparian.final.R data/riparianData.Rout.csv
 fevData.Rout: fevData.R Downloads/fev.csv
 
 fev.Rout: fev.R data/fevData.Rout.csv
+fev.final.Rout: fev.final.R data/fevData.Rout.csv
 
 ######################################################################
 
@@ -97,6 +107,14 @@ fev.Rout: fev.R data/fevData.Rout.csv
 penguinData.Rout: penguinData.R
 
 penguins.Rout: penguins.R data/penguinData.Rout.csv
+
+## morePenguins
+morePenguinsData.Rout: morePenguinsData.R Downloads/morePenguins.rds
+
+## Penguins
+## data/penguinData.Rout.csv: penguinData.R
+penguinData.Rout: penguinData.R
+
 
 ######################################################################
 
