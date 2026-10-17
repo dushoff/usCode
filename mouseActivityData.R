@@ -2,7 +2,7 @@ library(shellpipes)
 
 library(dplyr)
 
-set.seed(243)
+set.seed(241)
 groupSize <- 10
 tLevels= c("cold", "warm")
 tTemp = c(10, 20)
@@ -11,11 +11,13 @@ am = c(
 )
 as = 1.1
 
+nr <- groupSize*length(tLevels)
+
 af <- tibble(
-	id = as.character(1:(groupSize*length(tLevels)))
+	id = sprintf("x%0*d", nchar(nr), 1:nr)
 	, treat = rep(tLevels, each=groupSize)
 	, temp = rep(tTemp, each=groupSize)
-	, activity = rnorm(am[treat], as)
+	, activity = rnorm(n=nr, mean=am[treat], sd=as)
 )
 
 csvSave(af)
