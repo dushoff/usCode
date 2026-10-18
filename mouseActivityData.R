@@ -7,7 +7,7 @@ groupSize <- 10
 tLevels= c("cold", "warm")
 tTemp = c(10, 20)
 am = c(
-	cold=8, warm=11
+	cold=70, warm=95
 )
 as = 1.1
 

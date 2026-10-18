@@ -90,15 +90,19 @@ mouseActivity.Rout: mouseActivity.R data/mouseActivityData.Rout.csv
 
 ######################################################################
 
-## Joint erosion as an example for paired t test
-## include pivoting?
+## Paired t test
+
+## https://data.mendeley.com/datasets/v396kvjf6y/3
+## Downloads/
 
 ######################################################################
 
 ## Smoking example
 
 ## Downloads/fev.csv: 
-## Originally from http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/FEV.csv
+## Downloaded from http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/FEV.csv
+## https://jse.amstat.org/datasets/fev.txt
+## Downloads/fev.txt
 
 fevData.Rout: fevData.R Downloads/fev.csv
 
