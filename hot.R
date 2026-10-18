@@ -1,6 +1,7 @@
 library(readr)
 library(dplyr)
 library(ggplot2); theme_set(theme_bw(base_size=15))
+library(performance)
 
 children <- read_csv("data/fevData.Rout.csv")
 
@@ -12,6 +13,15 @@ onesamp <- lm(height ~ 1, data=children)
 summary(onesamp)
 confint(onesamp)
 plot(onesamp)
+check_model(onesamp)
+check_model(onesamp
+	, check = c("qq", "linearity", "pp_check")
+)
+check_model(onesamp
+	, check = c("qq", "homogeneity", "pp_check")
+)
+
+quit()
 
 print(ggplot(children)
 	+ aes(x=height)
