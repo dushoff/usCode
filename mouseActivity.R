@@ -25,7 +25,7 @@ summary(trMod)
 ) |> print()
 
 
-tempMod <- lm(activity ~ treat, data=act)
+tempMod <- lm(activity ~ temp, data=act)
 summary(tempMod)
 
 (pars <- 
