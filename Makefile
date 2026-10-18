@@ -93,7 +93,11 @@ mouseActivity.Rout: mouseActivity.R data/mouseActivityData.Rout.csv
 ## Paired t test
 
 ## https://data.mendeley.com/datasets/v396kvjf6y/3
-## Downloads/
+## Downloads/bengaliDigits.xlsx
+data/%.xlsx: Downloads/%.xlsx
+	$(copy)
+
+bengaliDigits.Rout: bengaliDigits.R data/bengaliDigits.xlsx
 
 ######################################################################
 
