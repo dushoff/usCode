@@ -111,7 +111,6 @@ bengaliDigits.Rout: bengaliDigits.R data/bengaliDigits.xlsx
 fevData.Rout: fevData.R Downloads/fev.csv
 
 fev.Rout: fev.R data/fevData.Rout.csv
-fev.final.Rout: fev.final.R data/fevData.Rout.csv
 
 ######################################################################
 

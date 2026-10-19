@@ -10,6 +10,12 @@ This repo is so you can follow R code used in McMaster Bio 3SA in (almost) real 
 
 [Canadian provinces](provinces.final.R)
 
+[Finger length](bengaliDigits.R)
+
+[Mouse activity](mouseActivity.R)
+
+[Lung capacity](fev.R)
+
 ## Assignments
 
 [dplyr](dplyrAsn.R)
