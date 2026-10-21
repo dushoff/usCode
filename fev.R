@@ -10,6 +10,8 @@ children <- read_csv("data/fevData.Rout.csv")
 
 summary(children)
 
+## It doesn't matter which “kind” of lm you are doing
+## Just tell R what predictors you want
 lMean <- lm(lungCapacity ~ 1, data=children)
 
 plot(lMean)
