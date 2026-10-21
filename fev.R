@@ -18,4 +18,4 @@ plot(lMean)
 
 summary(lMean)
 
-print(tidy(lMean))
+print(tidy(lMean, conf.int=TRUE))
