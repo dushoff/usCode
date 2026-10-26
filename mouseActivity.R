@@ -22,11 +22,11 @@ hist(residuals(twoGroup))
 
 ## Fit the same model using the continuous predictor
 
-twoGroupCont <- lm(activity~temp, data=act)
-
-plot(twoGroupCont)
+twoCont <- lm(activity~temp, data=act)
+plot(twoCont)
 
 print(
-	tidy(twoGroupCont, conf.int=TRUE)
+	tidy(twoCont, conf.int=TRUE)
 	|> select(term, estimate, conf.low, conf.high)
 )
+
