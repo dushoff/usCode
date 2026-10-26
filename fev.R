@@ -1,10 +1,11 @@
 ## fev stands for forced exhalation volume, it's a measure of lung function
+## It is measured in L over a period of 1s (units are a bit controversial!)
 library(readr)
 library(dplyr)
 library(ggplot2); theme_set(theme_bw(base_size=15))
-library(broom)
 
-## Install library broom!
+## Install library broom if necessary
+library(broom)
 
 children <- read_csv("data/fevData.Rout.csv")
 

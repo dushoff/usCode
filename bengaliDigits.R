@@ -8,3 +8,5 @@ library(dplyr)
 dat <- (
 	read_excel("data/bengaliDigits.xlsx")
 )
+
+summary(dat)

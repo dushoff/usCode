@@ -127,11 +127,7 @@ penguins.Rout: penguins.R data/penguinData.Rout.csv
 
 ## morePenguins
 morePenguinsData.Rout: morePenguinsData.R Downloads/morePenguins.rds
-
-## Penguins
-## data/penguinData.Rout.csv: penguinData.R
-penguinData.Rout: penguinData.R
-
+morePenguins.Rout: morePenguinsData.R data/morePenguinsData.Rout.csv
 
 ######################################################################
 

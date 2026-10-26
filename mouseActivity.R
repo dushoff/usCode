@@ -18,6 +18,7 @@ print(
 )
 
 ## This is an older plot function that we used in a hurry
+## Just to help get an idea of what the qq plot is doing
 hist(residuals(twoGroup))
 
 ## Fit the same model using the continuous predictor
@@ -30,3 +31,4 @@ print(
 	|> select(term, estimate, conf.low, conf.high)
 )
 
+## These are 
