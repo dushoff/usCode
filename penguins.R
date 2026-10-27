@@ -4,15 +4,6 @@ library(dplyr)
 library(DHARMa)
 library(ggplot2); theme_set(theme_bw(base_size=15))
 
-okabe <- palette.colors(palette = "Okabe-Ito")[-1]   # drop black
-
-options(
-	ggplot2.discrete.colour   = okabe
-	, ggplot2.discrete.fill     = okabe
-	, ggplot2.continuous.colour = "viridis"
-	, ggplot2.continuous.fill   = "viridis"
-)
-
 penguins <- read_csv("data/penguinData.Rout.csv")
 summary(penguins)
 

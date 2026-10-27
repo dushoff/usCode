@@ -19,3 +19,5 @@ This repo is so you can follow R code used in McMaster Bio 3SA in (almost) real 
 ## Assignments
 
 [dplyr](dplyrAsn.R)
+
+[lm](lmAsn.R)

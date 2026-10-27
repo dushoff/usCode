@@ -86,6 +86,9 @@ riparian.tmp.Rout: riparian.tmp.R data/riparianData.Rout.csv
 ## Fancy rounding from claude, not needed because I hadn't accumulated debt
 ## round.R
 
+## okabe code, use source?
+## oo.R
+
 ## Mouse activity as an example for classic t test
 
 ## mouseActivityData.Rout: mouseActivityData.R
@@ -130,6 +133,8 @@ fev.tmp.Rout: fev.tmp.R data/fevData.Rout.csv
 penguinData.Rout: penguinData.R
 
 penguins.Rout: penguins.R data/penguinData.Rout.csv
+
+lmAsn.Rout: lmAsn.R data/penguinData.Rout.csv
 
 ## morePenguins
 morePenguinsData.Rout: morePenguinsData.R Downloads/morePenguins.rds
