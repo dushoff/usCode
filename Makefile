@@ -74,6 +74,7 @@ riparianData.Rout: riparianData.R Downloads/riparianData.csv
 ## cp riparian.R riparian.final.R ##
 riparian.Rout: riparian.R data/riparianData.Rout.csv
 riparian.final.Rout: riparian.final.R data/riparianData.Rout.csv
+riparian.tmp.Rout: riparian.tmp.R data/riparianData.Rout.csv
 
 ######################################################################
 

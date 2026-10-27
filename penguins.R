@@ -1,7 +1,8 @@
 library(readr)
 library(dplyr)
-library(performance)
-library(DHARMa)
+## library(performance)
+## library(DHARMa)
+library(ggplot2); theme_set(theme_bw(base_size=15))
 
 penguins <- read_csv("data/penguinData.Rout.csv")
 summary(penguins)
@@ -13,6 +14,11 @@ print(penguins
 		, .by = species
 	)
 )
+
+ggplot(penguins
+)
+
+quit()
 
 overall <- lm(body_mass_g ~ 1, data=penguins)
 plot(overall)
