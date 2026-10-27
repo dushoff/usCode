@@ -20,4 +20,7 @@ af <- tibble(
 	, activity = rnorm(n=nr, mean=am[treat], sd=as)
 )
 
-csvSave(af)
+(af
+	|> mutate(activity = round(activity, 2))
+	|> csvSave()
+)

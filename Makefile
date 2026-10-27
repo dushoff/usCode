@@ -82,9 +82,13 @@ riparian.final.Rout: riparian.final.R data/riparianData.Rout.csv
 
 ######################################################################
 
+## Fancy rounding from claude, not needed because I hadn't accumulated debt
+## round.R
+
 ## Mouse activity as an example for classic t test
 
 ## mouseActivityData.Rout: mouseActivityData.R
+## data/mouseActivityData.Rout.csv: mouseActivityData.R
 
 mouseActivity.Rout: mouseActivity.R data/mouseActivityData.Rout.csv
 
@@ -108,6 +112,7 @@ bengaliDigits.Rout: bengaliDigits.R data/bengaliDigits.xlsx
 ## https://jse.amstat.org/datasets/fev.txt
 ## Downloads/fev.txt
 
+## data/fevData.Rout.csv: fevData.R
 fevData.Rout: fevData.R Downloads/fev.csv
 
 fev.Rout: fev.R data/fevData.Rout.csv
