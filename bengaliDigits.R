@@ -34,6 +34,8 @@ print(
 
 ldMod <- lm(leftDiff ~ 1, data=analyze)
 
+## This _is_ a paired t-test
+
 plot(ldMod)
 
 print(

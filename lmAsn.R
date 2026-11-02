@@ -15,6 +15,6 @@ print(
 spMod <- lm(bill_length_mm ~ bill_depth_mm + species, data=penguins)
 plot(spMod)
 print(
-	tidy(allMod, conf.int=TRUE)
+	tidy(spMod, conf.int=TRUE)
 	|> select(term, estimate, conf.low, conf.high)
 )
