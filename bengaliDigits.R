@@ -31,10 +31,12 @@ print(
 	|> select(term, estimate, conf.low, conf.high)
 )
 
-
+## We compare the differences to zero
 ldMod <- lm(leftDiff ~ 1, data=analyze)
 
-## This _is_ a paired t-test
+## Note, you can not use a P value to confirm that things are normal nor homoscedastic
+## This _is_ a paired t-test, cf.
+with(analyze, (t.test(l2d_mm, l4d_mm, paired=TRUE)))
 
 plot(ldMod)
 
