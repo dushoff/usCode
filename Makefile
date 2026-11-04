@@ -136,6 +136,8 @@ penguins.Rout: penguins.R data/penguinData.Rout.csv
 
 lmAsn.Rout: lmAsn.R data/penguinData.Rout.csv
 
+interPenguins.Rout: interPenguins.R data/penguinData.Rout.csv
+
 ## morePenguins
 morePenguinsData.Rout: morePenguinsData.R Downloads/morePenguins.rds
 morePenguins.Rout: morePenguinsData.R data/morePenguinsData.Rout.csv

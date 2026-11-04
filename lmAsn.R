@@ -18,3 +18,4 @@ print(
 	tidy(spMod, conf.int=TRUE)
 	|> select(term, estimate, conf.low, conf.high)
 )
+
