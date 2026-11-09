@@ -17,7 +17,18 @@ print(
 )
 
 ## use augment (from broom) to attach estimates to the original data!
-summary(augment(allMod, interval="confidence"))
+augAll <- augment(allMod, interval="confidence")
+
+## sometimes need to think carefully about which aesthetic mappings go where; color applies to the points, but not the fit
+print(ggplot(penguins)
+	+ aes(bill_depth_mm, bill_length_mm)
+	+ geom_point(aes(color=species))
+	+ geom_line(aes(y=.fitted), data=augAll)
+	+ geom_ribbon(aes(ymin=.lower, ymax=.upper)
+		, data=augAll
+		, alpha=0.4 ## make ribbon translucent
+	)
+)
 
 ######################################################################
 
@@ -28,3 +39,16 @@ print(
 	|> select(term, estimate, conf.low, conf.high)
 )
 
+## use augment (from broom) to attach estimates to the original data!
+augSp <- augment(spMod, interval="confidence")
+
+## sometimes need to think carefully about which aesthetic mappings go where; color applies to the points, but not the fit
+print(ggplot(penguins)
+	+ aes(bill_depth_mm, bill_length_mm, color=species)
+	+ geom_point()
+	+ geom_line(aes(y=.fitted), data=augSp)
+	+ geom_ribbon(aes(ymin=.lower, ymax=.upper, fill=species)
+		, data=augSp
+		, alpha=0.4 ## make ribbon translucent
+	)
+)
