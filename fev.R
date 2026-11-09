@@ -20,9 +20,7 @@ lMean <- lm(lungCapacity ~ 1, data=children)
 
 ## Or use a quantitative predictor
 lHeight <- lm(lungCapacity ~ 1+height, data=children)
-
 check_model(lHeight)
-quit()
 
 ## Remember if you just plot a model, you get diagnostic plots
 plot(lMean)

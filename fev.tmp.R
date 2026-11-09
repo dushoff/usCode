@@ -7,8 +7,6 @@ library(broom)
 library(performance)
 library(splines)
 
-startGraphics()
-
 ## Install library broom!
 
 children <- read_csv("data/fevData.Rout.csv")

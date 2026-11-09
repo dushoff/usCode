@@ -120,6 +120,14 @@ bengaliDigits.Rout: bengaliDigits.R data/bengaliDigits.xlsx
 fevData.Rout: fevData.R Downloads/fev.csv
 
 fev.Rout: fev.R data/fevData.Rout.csv
+
+## Quadratic fit
+## fev.quad.Rout: fev.quad.R
+
+## Multiple predictors, etc.
+## fev.multi.Rout: fev.multi.R
+
+## Fancier? (involves stacking)
 fev.tmp.Rout: fev.tmp.R data/fevData.Rout.csv
 
 ######################################################################
@@ -135,6 +143,8 @@ penguinData.Rout: penguinData.R
 penguins.Rout: penguins.R data/penguinData.Rout.csv
 
 lmAsn.Rout: lmAsn.R data/penguinData.Rout.csv
+
+classPenguins.Rout: classPenguins.R
 
 interPenguins.Rout: interPenguins.R data/penguinData.Rout.csv
 

@@ -15,6 +15,7 @@ This repo is so you can follow R code used in McMaster Bio 3SA in (almost) real 
 [Mouse activity](mouseActivity.R)
 
 [Lung capacity](fev.R)
+* [quadratic](fev.quad.R)
 
 ## Assignments
 
