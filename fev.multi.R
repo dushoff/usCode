@@ -13,7 +13,35 @@ children <- read_csv("data/fevData.Rout.csv")
 
 summary(children)
 
-## Or use a quantitative predictor
-lSmoke <- lm(lungCapacity ~ 1+currentSmoker, data=children)
-check_model(lSmoke)
+cSelect <- c("term", "estimate", "conf.low", "conf.high")
+
+## What is the effect of smoking on lung capacity?
+lSmoke <- lm(lungCapacity ~ 1+currentSmoker+age, data=children)
+## check_model(lSmoke)
+print(
+	tidy(lSmoke, conf.int=TRUE)
+	|> select(any_of(cSelect))
+)
+
+print(ggplot(children)
+	+ aes(currentSmoker, lungCapacity)
+	+ geom_boxplot()
+)
+
+## What is the effect of age on lung capacity?
+## Total effect
+
+ageMod <- lm(lungCapacity ~ 1 + age, data=children)
+check_model(ageMod)
+print(
+	tidy(ageMod, conf.int=TRUE)
+	|> select(any_of(cSelect))
+)
+
+ageHeightMod <- lm(lungCapacity ~ 1 + age + height, data=children)
+check_model(ageHeightMod)
+print(
+	tidy(ageHeightMod, conf.int=TRUE)
+	|> select(any_of(cSelect))
+)
 
