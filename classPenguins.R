@@ -52,3 +52,26 @@ print(ggplot(penguins)
 		, alpha=0.4 ## make ribbon translucent
 	)
 )
+
+######################################################################
+
+spIntMod <- lm(bill_length_mm ~ bill_depth_mm*species, data=penguins)
+check_model(spIntMod)
+print(
+	tidy(spIntMod, conf.int=TRUE)
+	|> select(term, estimate, conf.low, conf.high)
+)
+
+## use augment (from broom) to attach estimates to the original data!
+augSpInt <- augment(spIntMod, interval="confidence")
+
+## sometimes need to think carefully about which aesthetic mappings go where; color applies to the points, but not the fit
+print(ggplot(penguins)
+	+ aes(bill_depth_mm, bill_length_mm, color=species)
+	+ geom_point()
+	+ geom_line(aes(y=.fitted), data=augSpInt)
+	+ geom_ribbon(aes(ymin=.lower, ymax=.upper, fill=species)
+		, data=augSpInt
+		, alpha=0.4 ## make ribbon translucent
+	)
+)
