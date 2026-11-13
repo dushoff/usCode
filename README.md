@@ -18,6 +18,8 @@ This repo is so you can follow R code used in McMaster Bio 3SA in (almost) real 
 * [quadratic](fev.quad.R)
 * [multiple predictors](fev.multi.R)
 
+[penguins](classPenguins.R)
+
 ## Assignments
 
 [dplyr](dplyrAsn.R)
