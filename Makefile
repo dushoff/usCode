@@ -165,6 +165,12 @@ provinces.final.Rout: provinces.final.R data/provinces.tsv
 
 ######################################################################
 
+## Simulation
+
+powerTest.Rout: powerTest.R
+
+######################################################################
+
 ### Makestuff
 
 Sources += Makefile
