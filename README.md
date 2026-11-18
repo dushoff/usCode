@@ -19,6 +19,7 @@ This repo is so you can follow R code used in McMaster Bio 3SA in (almost) real 
 * [multiple predictors](fev.multi.R)
 
 [penguins](classPenguins.R)
+* [interaction notes](classPenguins.md)
 
 ## Assignments
 
