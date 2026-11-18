@@ -144,7 +144,7 @@ penguins.Rout: penguins.R data/penguinData.Rout.csv
 
 lmAsn.Rout: lmAsn.R data/penguinData.Rout.csv
 
-classPenguins.Rout: classPenguins.R
+classPenguins.Rout: classPenguins.R classPenguins.md
 
 interPenguins.Rout: interPenguins.R data/penguinData.Rout.csv
 
