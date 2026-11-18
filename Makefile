@@ -167,6 +167,8 @@ provinces.final.Rout: provinces.final.R data/provinces.tsv
 
 ## Simulation
 
+fishTanks.Rout: fishTanks.R
+
 powerTest.Rout: powerTest.R
 
 ######################################################################
