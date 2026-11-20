@@ -154,6 +154,9 @@ morePenguins.Rout: morePenguinsData.R data/morePenguinsData.Rout.csv
 
 ######################################################################
 
+## Project example
+## project.Rout: project.R project.md
+
 ## Provinces
 ## Downloads/provinces.tsv
 data/provinces.tsv: Downloads/provinces.tsv
