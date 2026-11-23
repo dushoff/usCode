@@ -20,7 +20,7 @@ Sources += $(wildcard *.md)
 
 Sources += $(wildcard *.R)
 
-hot.Rout: hot.R data/fevData.Rout.csv
+hot.Rout: hot.R
 
 ## R lecture
 
@@ -171,7 +171,6 @@ provinces.final.Rout: provinces.final.R data/provinces.tsv
 ## Simulation
 
 fishTanks.Rout: fishTanks.R
-fishTanksX.Rout: fishTanksX.R
 
 powerTest.Rout: powerTest.R
 
