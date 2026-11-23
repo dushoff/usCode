@@ -14,7 +14,6 @@ insect_effect <- 0
 tankSD <- 0 ## variation among tanks
 fishSD <- 2 ## variation among fish within a tank
 
-
 treatEffect <- c(algae=algae_growth, insects=algae_growth+insect_effect) ## mean growth by treatment
 ## One row per tank, with a random tank effect
 tanks <- (
