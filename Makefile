@@ -127,6 +127,9 @@ fev.Rout: fev.R data/fevData.Rout.csv
 ## Multiple predictors, etc.
 ## fev.multi.Rout: fev.multi.R
 
+## Extra lecture
+## fev.extra.Rout: fev.extra.R fev.extra.md
+
 ## Fancier? (involves stacking)
 fev.tmp.Rout: fev.tmp.R data/fevData.Rout.csv
 
