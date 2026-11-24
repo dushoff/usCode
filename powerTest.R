@@ -20,17 +20,34 @@ study <- function(n, mh, sdh){
 	est <- coef(m)
 	return(tibble(low=ci[[1]], est=est[[1]], high=ci[[2]]))
 }
-## Some sample code to do study once
+## Redo the study once
+study(n=20, mh=67, sdh=5)
+## Why do we get a slightly different answer?
 
 ## Do the fake study many times
+## NB: I wrote simplify=TRUE here is what went wrong in class -- you rarely want R to automatically simplify
 experiment <- function(n, mh, sdh, reps){
 	return(
-		replicate(reps, study(n, mh, sdh), simplify=TRUE)
+		replicate(reps, study(n, mh, sdh), simplify=FALSE)
+		|> bind_rows()
 	)
 }
 
-experiment <- function(n, m, sig, reps){
-	return(replicate(reps, study(n, m, sig), simplify=FALSE) |> bind_rows())
-}
+ex <- experiment(n=20, mh=67, sdh=5, reps=1000)
 
-experiment(n=20, mh=67, sdh=5, reps=1000)
+## Now make a function to evaluate the study
+evaluate <- function(ex){
+	return(ex
+		|> summarize(
+			widthCI = mean(high-low)
+			, meanEst = mean(est)
+		)
+	)
+}
+print(ex
+	|> evaluate()
+)
+
+## If we do this study, we expect to get CI width of about 4.6 in, which seems pretty high. How big a random sample would we need to get within an inch? Can you experiment?
+
+## What is the distributions of CIs we might expect? What would be a good way to visualize that?

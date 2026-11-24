@@ -21,6 +21,8 @@ This repo is so you can follow R code used in McMaster Bio 3SA in (almost) real 
 [penguins](classPenguins.R)
 * [interaction notes](classPenguins.md)
 
+[Power test](powerTest.R)
+
 ## Assignments
 
 [dplyr](dplyrAsn.R)
