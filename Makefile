@@ -133,6 +133,9 @@ fev.Rout: fev.R data/fevData.Rout.csv
 ## Fancier? (involves stacking)
 fev.tmp.Rout: fev.tmp.R data/fevData.Rout.csv
 
+## Smoking as a response (logistic)
+smoke.Rout: smoke.R data/fevData.Rout.csv
+
 ######################################################################
 
 ## HERE: Add banana data also, ask them about data??
